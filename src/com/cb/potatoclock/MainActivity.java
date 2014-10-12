@@ -30,20 +30,32 @@ public class MainActivity extends Activity implements FragmentCallBack{
 
 	@Override
 	public void launchOnClickListener(View view) {
-		LaunchFragment launchFrag = (LaunchFragment)fragmentManager.findFragmentById(R.id.launchFrameLayout);
-		if(launchFrag != null){
-			ImageButton launch = launchFrag.getLaunch();
-			launch.setOnClickListener(new OnClickListener() {
-				
-				@Override
-				public void onClick(View v) {
-					FragmentTransaction ft = fragmentManager.beginTransaction();
-					ft.add(R.id.launchFrameLayout,new WorkingFragment());
-					ft.addToBackStack(null);
-					ft.commit();
-				}
-			});
-		}
+		
+		view.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				FragmentTransaction ft = fragmentManager.beginTransaction();
+				ft.add(R.id.launchFrameLayout,new WorkingFragment());
+				ft.addToBackStack(null);
+				ft.commit();
+			}
+		});
+		
+//		LaunchFragment launchFrag = (LaunchFragment)fragmentManager.findFragmentById(R.id.launchFrameLayout);
+//		if(launchFrag != null){
+//			ImageButton launch = launchFrag.getLaunch();
+//			launch.setOnClickListener(new OnClickListener() {
+//				
+//				@Override
+//				public void onClick(View v) {
+//					FragmentTransaction ft = fragmentManager.beginTransaction();
+//					ft.add(R.id.launchFrameLayout,new WorkingFragment());
+//					ft.addToBackStack(null);
+//					ft.commit();
+//				}
+//			});
+//		}
 	}
 
 

@@ -28,7 +28,7 @@ public class LaunchFragment extends Fragment {
 	public void onAttach(Activity activity) {
 		super.onAttach(activity);
 		try{
-			fragmentCallback = (FragmentCallBack)activity;
+			fragmentCallback = (MainActivity)activity;
 		}catch(ClassCastException e){
 			throw new ClassCastException(activity.toString() + "must implements FragmentCallback Interface");
 		}
@@ -50,7 +50,7 @@ public class LaunchFragment extends Fragment {
 		linearLayoutLongTime.setOnClickListener(new LinearLayoutListener());
 		//开始番茄工作法，监听launch按钮
 		setLaunch((ImageButton)view.findViewById(R.id.ready_go));
-		fragmentCallback.launchOnClickListener(null);
+		fragmentCallback.launchOnClickListener(getLaunch());
 		
 		return view;
 	}
