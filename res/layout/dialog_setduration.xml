@@ -40,6 +40,7 @@
             android:textSize="16sp"/>
         
         <TextView 
+            android:id="@+id/tvWorkTime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="30"
@@ -56,6 +57,7 @@
     </LinearLayout>
 
     <SeekBar
+        android:id="@+id/seekBarWorkTime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
@@ -90,7 +92,8 @@
             android:textColor="#FF000000"
             android:textSize="16sp"/>
         
-        <TextView 
+        <TextView
+            android:id="@+id/tvShortRestTime" 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="30"
@@ -107,6 +110,7 @@
     </LinearLayout>
 
     <SeekBar
+        android:id="@+id/seekBarShortRestTime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
@@ -142,6 +146,7 @@
             android:textSize="16sp"/>
         
         <TextView 
+            android:id="@+id/tvLongRestTime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="30"
@@ -158,6 +163,7 @@
     </LinearLayout>
 
     <SeekBar
+        android:id="@+id/seekBarLongRestTime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
